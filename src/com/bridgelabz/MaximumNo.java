@@ -7,6 +7,7 @@ public class MaximumNo {
 
         MaximumNo maxNumber = new MaximumNo();
         maxNumber.findMaximum(2, 4, 6);
+        maxNumber.findMaximum(1.2f,1.4f,1.6f);
     }
 
     public int findMaximum(Integer X, Integer Y, Integer Z) {
@@ -15,7 +16,18 @@ public class MaximumNo {
             max = Y;
         if (Z.compareTo(max) > 0)
             max = Z;
-        System.out.println("Maximum Number = " + max);
+        System.out.println("Maximum Number in Integer = " + max);
+
+        return max;
+    }
+
+    public Float findMaximum(Float X, Float Y, Float Z) {
+        float max = X;
+        if (Y.compareTo(max) > 0)
+            max = Y;
+        if (Z.compareTo(max) > 0)
+            max = Z;
+        System.out.println("Maximum Number in float = " + max);
 
         return max;
     }
