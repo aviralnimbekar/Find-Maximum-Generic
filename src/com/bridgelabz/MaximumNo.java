@@ -22,13 +22,16 @@ public class MaximumNo<T extends Comparable> {
             max = input4;
         if (input5.compareTo(max) > 0)
             max = input5;
-        System.out.println("Maximum Number = " + max);
-
         return max;
     }
 
+    public static <T> void printMax(T max) {
+        System.out.println("Maximum element = " + max);
+    }
+
     public void testMaximum() {
-        MaximumNo.findMaximum(input1, input2, input3, input4, input5);
+       T max = MaximumNo.findMaximum(input1, input2, input3, input4, input5);
+       printMax(max);
     }
 
     public static void main(String[] args) {
@@ -37,5 +40,6 @@ public class MaximumNo<T extends Comparable> {
         new MaximumNo<Integer>(2, 4, 6, 8, 10).testMaximum();
         new MaximumNo<Float>(1.2f, 1.4f, 1.6f, 1.8f, 1.11f).testMaximum();
         new MaximumNo<String>("Apple", "Peach", "Banana", "Greps", "Guava").testMaximum();
+
     }
 }
